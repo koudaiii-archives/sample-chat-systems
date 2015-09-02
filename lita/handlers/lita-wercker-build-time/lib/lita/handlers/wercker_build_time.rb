@@ -3,13 +3,13 @@ module Lita
   module Handlers
     class WerckerBuildTime < Handler
       # insert handler code here
-      route(/of\smaster.*passed/, :build_time)
+      route(/.*of\smaster.*passed/, :build_time)
 
       def build_time(response)
         build_no = get_build_no(response)
         wercker_build_status = set_wercker_status(build_no)
         log.debug "#{wercker_build_status}"
-        response.reply(wercker_build_status)
+        response.reply(wercker_build_status.to_s)
       end
 
       def get_build_no(response)
