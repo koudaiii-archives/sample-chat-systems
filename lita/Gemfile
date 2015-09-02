@@ -15,5 +15,6 @@ gem "lita-slack"
 # For example:
 # gem "lita-google-images"
 # gem "lita-karma"
-gem "lita-parrot", path: "handlers/lita-parrot"
+# gem "lita-parrot", path: "handlers/lita-parrot"
+gem "lita-wercker-build-time", path: "handlers/lita-wercker-build-time"
 gem "lita-slack-watch", path: "handlers/lita-slack-watch"

@@ -1,13 +1,13 @@
 PATH
-  remote: handlers/lita-parrot
-  specs:
-    lita-parrot (0.1.0)
-      lita (>= 4.6)
-
-PATH
   remote: handlers/lita-slack-watch
   specs:
     lita-slack-watch (0.1.0)
+      lita (>= 4.6)
+
+PATH
+  remote: handlers/lita-wercker-build-time
+  specs:
+    lita-wercker-build-time (0.1.0)
       lita (>= 4.6)
 
 GEM
@@ -65,9 +65,9 @@ PLATFORMS
 DEPENDENCIES
   foreman
   lita
-  lita-parrot!
   lita-slack
   lita-slack-watch!
+  lita-wercker-build-time!
 
 BUNDLED WITH
    1.10.5
