@@ -3,7 +3,7 @@ module Lita
   module Handlers
     class WerckerBuildTime < Handler
       # insert handler code here
-      route(/.*passed/, :build_time, help: { "TEXT" => "Echoes back TEXT." })
+      route(/of\smaster.*passed/, :build_time)
 
       def build_time(response)
         build_no = get_build_no(response)
