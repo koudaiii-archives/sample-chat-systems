@@ -29,9 +29,11 @@ Lita.configure do |config|
   ## Example: Set options for the Redis connection.
   config.redis.host = "127.0.0.1"
   config.redis.port = 6379
-
+  config.http.port = 8080
   ## Example: Set configuration for any loaded handlers. See the handler's
   ## documentation for options.
   # config.handlers.some_handler.some_config_key = "value"
-
+  
+  config.handlers.slack_watch.webhook_token = "Cq9wq3TAJp5FGCsUbpzhrKrR"
+  config.handlers.slack_watch.team_domain = "general"
 end
