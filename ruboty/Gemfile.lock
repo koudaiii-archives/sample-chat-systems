@@ -1,0 +1,63 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (4.2.4)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    chrono (0.0.6)
+      activesupport
+    dotenv (2.0.2)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.10.0)
+      faraday (>= 0.7.4, < 0.10)
+    i18n (0.7.0)
+    json (1.8.3)
+    mem (0.1.5)
+    minitest (5.8.0)
+    multipart-post (2.0.0)
+    redis (3.2.1)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
+    ruboty (1.2.2)
+      activesupport
+      bundler
+      dotenv
+      mem
+      slop
+    ruboty-cron (1.0.2)
+      activesupport
+      chrono
+      ruboty (>= 0.2.0)
+    ruboty-google_image (0.0.7)
+      faraday
+      faraday_middleware
+      ruboty
+    ruboty-redis (0.0.6)
+      redis
+      redis-namespace
+      ruboty
+    ruboty-slack (0.1.12)
+      ruboty (>= 1.0.4)
+      xrc (>= 0.1.8)
+    slop (4.2.0)
+    thread_safe (0.3.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    xrc (0.1.8)
+      activesupport
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ruboty-cron
+  ruboty-google_image
+  ruboty-redis
+  ruboty-slack
+
+BUNDLED WITH
+   1.10.5
