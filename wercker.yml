@@ -1,4 +1,4 @@
-box: wercker/rvm@4.0.0
+box: ruby
 no-response-timeout: 225
 build:
   steps:
