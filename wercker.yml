@@ -1,0 +1,17 @@
+box: wercker/rvm
+no-response-timeout: 225
+build:
+  steps:
+    # Execute the bundle install step, a step provided by wercker
+    - script:
+        name: Hello World
+        code: echo "Hello World"
+    - bundle-install
+  after-steps:
+    - script:
+        name: after step
+        code: echo "vagrant destroy --force"
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_WEBHOOK_URL
+        team: koudaiii
+        channel: general
