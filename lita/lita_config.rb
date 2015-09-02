@@ -36,5 +36,5 @@ Lita.configure do |config|
   # config.handlers.some_handler.some_config_key = "value"
 
   config.handlers.slack_watch.webhook_token = "Cq9wq3TAJp5FGCsUbpzhrKrR"
-  config.handlers.slack_watch.team_domain = "general"
+  config.handlers.slack_watch.team_domain = "koudaiii"
 end
