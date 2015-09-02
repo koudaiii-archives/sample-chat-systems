@@ -5,9 +5,9 @@ module Lita
       route(/.*/, :parrot, help: { "TEXT" => "Echoes back TEXT." })
 
       def parrot(response)
-        response.reply_privately(response.matches)
+        response.reply(response.matches)
       end
-      Lita.register_handler(self)
     end
+    Lita.register_handler(Parrot)
   end
 end
