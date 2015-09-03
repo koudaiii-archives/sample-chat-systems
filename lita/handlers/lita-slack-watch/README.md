@@ -41,8 +41,8 @@ Lita.configure do |config|
   # Lita's HTTP port is used for Slack integration
   config.http.port = 8080
   # lita-slack-watch config
-  config.watchs.slack_watch.webhook_token = "Cq9wq3TAJp5FGCsUbpzhrKrR"
-  config.watchs.slack_watch.team_domain = "general"
+  config.watchs.slack_watch.webhook_token = ENV["SLACK_WEBHOOK_TOKEN"] #ex: Cq9wq3TAJp5FGCsUbpzhrKrR
+  config.watchs.slack_watch.team_domain = ENV["SLACK_TEAM_DOMAIN"]#ex: koudaiii
   # Some more adapter and other config
   # .....
 end

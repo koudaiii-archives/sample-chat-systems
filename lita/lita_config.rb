@@ -18,7 +18,7 @@ Lita.configure do |config|
   # The adapter you want to connect with. Make sure you've added the
   # appropriate gem to the Gemfile.
   config.robot.adapter = :slack
-  config.adapters.slack.token = "xoxb-10039272419-bzzyYvMUJ9VDk9dmlCSDrrZY"
+  config.adapters.slack.token = ENV["SLACK_ACCOUNT_TOKEN"]
 
   ## Example: Set options for the chosen adapter.
   config.adapter.username = "lita-dev"
@@ -35,6 +35,6 @@ Lita.configure do |config|
   ## documentation for options.
   # config.handlers.some_handler.some_config_key = "value"
 
-  config.handlers.slack_watch.webhook_token = "Cq9wq3TAJp5FGCsUbpzhrKrR"
-  config.handlers.slack_watch.team_domain = "koudaiii"
+  config.handlers.slack_watch.webhook_token = ENV["SLACK_WEBHOOK_TOKEN"]
+  config.handlers.slack_watch.team_domain = ENV["SLACK_TEAM_DOMAIN"]
 end

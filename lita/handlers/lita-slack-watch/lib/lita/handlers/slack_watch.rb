@@ -28,7 +28,9 @@ module Lita
         log.debug "SlackWatch::receive webhook_token:#{req['token']} team_domain:#{req['team_domain']}"
         log.debug "SlackWatch::receive user id:#{req['user_id']} name:#{req['user_name']}"
         log.debug "SlackWatch::receive room id:#{req['channel_id']} name:#{req['channel_name']}"
+        log.debug "SlackWatch::receive message text #{req['text']}"
         log.debug "SlackWatch::receive message text size #{req['text'].size} byte(s)"
+        log.debug "SlackWatch::receive req.params #{req.params}"
 
         user = User.create(req['user_id'], name: req['user_name'], mention_name: req['user_name'])
         room = User.create(req['channel_id'], name: req['channel_name'])
